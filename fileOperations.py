@@ -31,6 +31,7 @@ designPrompt2 = "ACTION: (1, 2, 3, 4)\n" + pixels2 + "\n1. Add_To_File.\n2. Edit
 
 '''
 
+
 def quit():
     print("App Closed!\n")
     print(" Powered By:".rjust(56, "*"), "**"*23, "\n \t \t \t\t\tEne-Une Reuben OCHEDI\n", "All Rigths Reserved.".rjust(60, " "), "\n", "(c)October, 2019".rjust(56, " "))
@@ -40,8 +41,16 @@ def quit():
     time.sleep(5)
     exit()
 
+if(os.access("files", os.F_OK)):
+    pass
+else:
+    print("FILE NOT FOUND: WE COULD NOT LOCATE A FOLDER NAMED \"files\" IN \
+THE DIRECTORY \n\t\tPLEASE CREATE ONE MANUALLY IN THE SAME PATH AS THIS FILE.")
+    print("ALL YOUR FILES WILL BE SAVED IN THE FOLDER(files).\n")
+    quit()
 
-def uppercase(text):
+
+def up_Or_Low_Case(text):
     if text.isupper():
         return text
     else:
@@ -58,13 +67,13 @@ def choice():
 
 def fileName(flag):
     global filename
-    global filename_
+    global filename_    #filename to be displayed, not including the directory___/files
     filename = input("\nEnter desired filename: ")
     if filename == "":
         quit()
     else:
-        filename_ = uppercase(filename) + file_Extension
-        filename = folderName + uppercase(filename) + file_Extension
+        filename_ = up_Or_Low_Case(filename) + file_Extension
+        filename = folderName + up_Or_Low_Case(filename) + file_Extension
         args = flag
         flag = str(flag)
         if flag.isdigit():

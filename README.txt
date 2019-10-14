@@ -1,4 +1,4 @@
-FILE OPERATIONS
+		FILE OPERATIONS
 This is a simple file operation created with Python. You can use it to perform 
 the following segmented operations:
 
@@ -11,7 +11,8 @@ The sub operations of the above are:
 	* Editing an existing file
 	* Viewiing the content of a file
 
-NOTE: YOUR FILE WILL BE LOCATED IN A FOLDER NAMED files IN THE SAME DIRECTORY 
+NOTE: YOUR FILE WILL BE LOCATED IN A FOLDER NAMED files (FOR NOW, 
+      YOU HAVE TO CREATE THE FOLDER YOURSELF) IN THE SAME DIRECTORY 
       WITH THIS FILE (OR THE PYTHON FILE) 
 	 ALL OPERATIONS INVOLVED ARE LIMITED TO .txt (NOTEPAD) FILES
 	 YOU CAN EDIT IT TO YOUR CHOICE OF FILE
